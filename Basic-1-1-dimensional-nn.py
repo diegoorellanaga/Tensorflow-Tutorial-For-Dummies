@@ -30,7 +30,7 @@ def create_data_label(dim,amount,input_data):
     matrix=np.ndarray([dim,amount])
     for i in range(dim):
          #matrix[:][i]=input_data[:][i]**2
-         matrix[:][i]=np.sin(input_data[:][i])+np.random.randn(dim,amount)/8
+         matrix[:][i]=np.sin(input_data[:][i])+np.random.randn(dim,amount)/16
     return matrix
     
     
@@ -96,9 +96,9 @@ with tf.Session() as sess:
 
         #We are going to go through every point of the data set once per each epoch. Ideally we should shuffle the data
         #each time we go through all of it. The more random the better.
-        random_seed=random.randint(1,epoch+1)        
-        random.Random(random_seed).shuffle(input_matrix) #We shuffle the data each time we start a new epoch
-        random.Random(random_seed).shuffle(output_matrix)
+        #random_seed=random.randint(1,epoch+1)        
+        #random.Random(random_seed).shuffle(input_matrix) #We shuffle the data each time we start a new epoch
+        #random.Random(random_seed).shuffle(output_matrix)
         #output_matrix=create_data_label(num_classes,data_set_size,input_matrix.T).T
         for f in range(len(output_matrix)):
             batch_x= input_matrix[f]
@@ -110,7 +110,7 @@ with tf.Session() as sess:
             #accept any size in the first coordinate of the shape [any,1]
             batch_x=batch_x.reshape([1,num_input])
             batch_y=batch_y.reshape([1,num_classes])
-            #Run optimization op (backprop)
+#           #Run optimization op (backprop)
             #Remember that sess.run(fetches,feed_dict=None,some other param) receives fetches, and
             # feed_dict as parameters, as long with others that will not be used now.
             #fetches can be a singleton or 'fetches' can be arbitrary lists, tuples, namedtuple, dicts:
@@ -129,8 +129,8 @@ with tf.Session() as sess:
         # Here we show the plot every 10 epochs and the corresponding loss value
         if step % display_step == 0 or step == 1:
             results = sess.run(logits, feed_dict={X:input_test})
-            plt.plot(results.T[:][0],'r--')
             plt.plot(output_test.T[:][0],'b--')
+            plt.plot(results.T[:][0],'ro')
             plt.show()
 
             loss = sess.run(loss_op, feed_dict={X: batch_x, Y: batch_y})
@@ -141,8 +141,7 @@ with tf.Session() as sess:
     matrix[:][0]=np.random.randint(-6000,6000,[1,40000])/300.0
     matrix.sort(1)
     resultsfinal = sess.run(logits, feed_dict={X:matrix.T})
-    plt.plot(resultsfinal,'r-')
     matrix_final=create_data_label(1,40000,matrix).T
-   
-    plt.plot(matrix_final.T[:][0],'r-')
+    plt.plot(matrix_final.T[:][0],'b-')
+    plt.plot(resultsfinal,'ro')
     print("Extrapolation error:{0}".format(sum(np.sqrt((resultsfinal-matrix_final)**2))))
