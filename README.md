@@ -1,6 +1,6 @@
 # Building a simple neural network #
 
-The purpose of these scripts is to easily show how to build a simple neural network. When I was looking for tutorials about simple neural networks in tensorflow, I didn't find any good explanation or any neural network simple enough to explain the tensorflow syntax. I hope this helps you to better understand how to use tensorflow.
+The purpose of these scripts is to easily show how to build a simple neural network. I hope this helps you to better understand how to use tensorflow.
 
 ## Online training ##
 
