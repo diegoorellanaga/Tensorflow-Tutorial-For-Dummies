@@ -91,6 +91,10 @@ with tf.Session() as sess:
 
     # Run the initializer
     sess.run(init)
+    results = sess.run(logits, feed_dict={X:input_test})
+    plt.plot(input_test,output_test.T[:][0],'b--')
+    plt.plot(input_test,results.T[:][0],'ro')
+    plt.show()
 
     for step in range(1, epoch+1):
 
@@ -129,8 +133,8 @@ with tf.Session() as sess:
         # Here we show the plot every 10 epochs and the corresponding loss value
         if step % display_step == 0 or step == 1:
             results = sess.run(logits, feed_dict={X:input_test})
-            plt.plot(output_test.T[:][0],'b--')
-            plt.plot(results.T[:][0],'ro')
+            plt.plot(input_test,output_test.T[:][0],'b--')
+            plt.plot(input_test,results.T[:][0],'ro')
             plt.show()
 
             loss = sess.run(loss_op, feed_dict={X: batch_x, Y: batch_y})
@@ -142,6 +146,6 @@ with tf.Session() as sess:
     matrix.sort(1)
     resultsfinal = sess.run(logits, feed_dict={X:matrix.T})
     matrix_final=create_data_label(1,40000,matrix).T
-    plt.plot(matrix_final.T[:][0],'b-')
-    plt.plot(resultsfinal,'ro')
+    plt.plot(matrix.T,matrix_final.T[:][0],'b-')
+    plt.plot(matrix.T,resultsfinal,'ro')
     print("Extrapolation error:{0}".format(sum(np.sqrt((resultsfinal-matrix_final)**2))))
