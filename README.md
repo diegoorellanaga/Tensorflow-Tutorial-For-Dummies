@@ -17,7 +17,11 @@ The picture below shows graphs of the data during the training. We can see how t
 ### Neural network data outcome graphs ###
 ![graphs1]
 
+## Batch training ##
 
+### Basic-1-1dimensional-nn-batch.py ###
+
+This script is trains the neural network with a batch training. This means that we minimize the loss function considering not only 1 data but a set of more than 1 point. 
 
 
 
