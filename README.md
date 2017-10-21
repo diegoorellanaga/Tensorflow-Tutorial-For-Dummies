@@ -6,16 +6,12 @@ The purpose of these scripts is to easily show how to build a simple neural netw
 
 This script contains a 1-6-6-1 neural network that is trained with a sinusoidal data. The network is trained with an online training, this means that the weights change with each data point. In other words, we train with each data point at a time. Once we have covered every point of the training set we say that we have finished an epoch. Once we finish and epoch we start the process all over again until we complete the maximum epoch amount.
 
-# Hi #
 
-
-
-
- # Hi #
- ## Hi ##
 ### Neural network with a 1-6-6-1 arquitecture ###
 ![nn66]
-**dfsdfs**
+
+The picture below shows graphs of the data during the training. We can see how the neural network aproximates the function of the data.
+
 ![graphs1]
 dfsdhfsdhfisdhfihsdpiufhsdipufhsd
 
