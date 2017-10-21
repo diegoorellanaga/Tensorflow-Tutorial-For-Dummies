@@ -10,8 +10,9 @@ This script contains a 1-6-6-1 neural network that is trained with a sinusoidal 
 ### Neural network with a 1-6-6-1 arquitecture ###
 ![nn66]
 
-The picture below shows graphs of the data during the training. We can see how the neural network aproximates the function of the data.
+The picture below shows graphs of the data during the training. We can see how the neural network aproximates the function of the data. The red line is the data given by the neural network, the blue line is the real data.
 
+### Neural network data outcome graphs ###
 ![graphs1]
 dfsdhfsdhfisdhfihsdpiufhsdipufhsd
 
