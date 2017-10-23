@@ -85,7 +85,8 @@ train_op = optimizer.minimize(loss_op) #This is what we want to minimize, the me
 
 # Initialize the variables (i.e. assign their default value)
 init = tf.global_variables_initializer()
-
+batch_x=input_matrix
+batch_y=output_matrix
 # Start training
 with tf.Session() as sess:
 
@@ -95,7 +96,7 @@ with tf.Session() as sess:
     plt.plot(input_test,output_test.T[:][0],'b--')
     plt.plot(input_test,results.T[:][0],'ro')
     plt.show()
-
+    
     for step in range(1, epoch+1):
 
         #We are going to go through every point of the data set once per each epoch. Ideally we should shuffle the data
@@ -108,7 +109,7 @@ with tf.Session() as sess:
         for start, end in zip(range(0, data_set_size, BATCH_SIZE),
                               range(BATCH_SIZE, data_set_size + 1,BATCH_SIZE)):
 
-            sess.run(train_op, feed_dict={X: input_matrix[start:end],Y: output_matrix[start:end]})        
+            sess.run(train_op, feed_dict={X: batch_x[start:end],Y: batch_y[start:end]})        
         
         
         
