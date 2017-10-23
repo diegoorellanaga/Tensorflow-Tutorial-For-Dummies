@@ -29,7 +29,7 @@ This script trains the neural network with a batch training. This means that we 
 
 ### Basic-2-2-dimensional-nn-batch.py ###
 
-This script now has 2 dimensions as input and 2 as output. Understanding this syntax will help us understand any combination of input/output dimensions.
+This script now has 2 dimensions as input and 2 as output. Understanding this syntax will help us understand any combination of input/output dimensions. In the graphs below the color make the distinction between the output dimensions.
 
 
 
