@@ -30,8 +30,8 @@ This script trains the neural network with a batch training. This means that we 
 ### Basic-2-2-dimensional-nn-batch.py ###
 
 This script now has 2 dimensions as input and 2 as output. Understanding this syntax will help us understand any combination of input/output dimensions. In the graphs below the color make the distinction between the output dimensions.
-
-
+### Neural network 2-6-6-2 batch data outcome graphs ###
+![graphs3]
 
 
 
@@ -44,3 +44,5 @@ This script now has 2 dimensions as input and 2 as output. Understanding this sy
 [graphs1]:	https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/graphs.png
 
 [graphs2]:	https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/graphs-batch.png
+
+[graphs3]:	https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/nn-2-2-batch-20.png
