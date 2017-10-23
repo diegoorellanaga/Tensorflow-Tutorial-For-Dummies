@@ -21,9 +21,9 @@ The picture below shows graphs of the data during the training. We can see how t
 
 ### Basic-1-1dimensional-nn-batch.py ###
 
-This script is trains the neural network with a batch training. This means that we minimize the loss function considering not only 1 data but a set of more than 1 point. 
-
-
+This script is trains the neural network with a batch training. This means that we minimize the loss function considering not only 1 data but a set of more than 1 point. The graphs below are produced with a batch size equal to 100 and 500 epochs.
+### Neural network batch data outcome graphs ###
+![graphs2]
 
 
 
@@ -38,3 +38,5 @@ This script is trains the neural network with a batch training. This means that 
 [nn66]:		https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/Screenshot%20from%202017-10-20%2016-38-25.png
 
 [graphs1]:	https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/graphs.png
+
+[graphs2]:	https://github.com/diegoorellanaga/Tensorflow-Tutorial-For-Dummies/blob/master/graphs-batch.png
