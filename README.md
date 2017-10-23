@@ -12,7 +12,7 @@ This script contains a 1-6-6-1 neural network that is trained with a sinusoidal 
 ### Neural network with a 1-6-6-1 arquitecture ###
 ![nn66]
 
-The picture below shows graphs of the data during the training. We can see how the neural network aproximates the function of the data. The red line is the data given by the neural network, the blue line is the real data.
+The picture below shows graphs of the data during the training. We can see how the neural network approximates the function of the data. The red line is the data given by the neural network, the blue line is the real data.
 
 ### Neural network data outcome graphs ###
 ![graphs1]
@@ -21,11 +21,15 @@ The picture below shows graphs of the data during the training. We can see how t
 
 ### Basic-1-1dimensional-nn-batch.py ###
 
-This script is trains the neural network with a batch training. This means that we minimize the loss function considering not only 1 data but a set of more than 1 point. The graphs below are produced with a batch size equal to 100 and 500 epochs.
+This script trains the neural network with a batch training. This means that we minimize the loss function considering not only 1 data but a set of more than 1 point. The graphs below are produced with a batch size equal to 100 and 500 epochs.
 ### Neural network batch data outcome graphs ###
 ![graphs2]
 
+## Increasing dimensions ##
 
+### Basic-2-2-dimensional-nn-batch.py ###
+
+This script now has 2 dimensions as input and 2 as output. Understanding this syntax will help us understand any combination of input/output dimensions.
 
 
 
